@@ -1,0 +1,97 @@
+@import  url('https://fonts.googleapis.com/css2?family=Sono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Sono:wght@200&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+nav {
+    height: 72px;
+    color: white;
+    background-image: linear-gradient(to right,purple,blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sono', sans-serif;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style-type: none;
+    /* color: red; */
+}
+.game_container {
+    margin-top: 40px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+table {
+    border: none;
+}
+.game_container .container table tr {
+    /* border: none; */
+    border: 2px solid black;
+}
+.game_container .container table tr td {
+    font-size: 10vh;
+    /* font-size: auto; */
+    height: 11vh;
+    /* width: 5vw; */
+    padding: 2vw;
+    cursor: pointer;
+    text-align: center;
+}
+.game_container .container table tr td:hover{
+    background-color: rgb(209, 169, 247);
+}
+.game_container .game_info{
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.game_container .game_info .img_box {
+    height: 100px;
+}
+.game_container .game_info .img_box img {
+    height: 0vh;
+    /* display: none; */
+    transition: height;
+    transition-duration: 1s;
+}
+.content {
+    display: block;
+    height: 8hw;
+    width: 8vh;
+}
+.game_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navigation {
+    display: flex;
+    gap: 10px;
+}
+.info {
+    color: red;
+}
+#reset {
+    font-family: 'Baloo Bhaina 2', cursive;
+    padding: 0px 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: antiquewhite;
+}
+.bl {
+    border-left: none;
+}
+.br {
+    border-right: none;
+}
+.bt {
+    border-top: none;
+}
+.bb {
+    border-bottom: none;
+}

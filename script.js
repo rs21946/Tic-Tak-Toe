@@ -41,16 +41,18 @@ const checkWin = () => {
         }
     })
 }
+
 // document.querySelector("h1").style.color = "red";
 // Game Logic
 let boxes = document.getElementsByTagName("td");
 // console.log(boxes);
 music.play();
-console.log(music.controls);;
+let count = 0;
 Array.from(boxes).forEach(element => {
     let content = element.querySelector(".content");
     element.addEventListener('click',()=> {
         if(content.innerText==='') {
+            count++;
             content.innerText = turn;
             turn = changeTurn();
             audioTurn.play();
@@ -59,7 +61,14 @@ Array.from(boxes).forEach(element => {
                 if(turn === "X") document.getElementsByClassName("info")[0].style.color = "red"
                 else document.getElementsByClassName("info")[0].style.color = "blue"
                 document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-            } 
+                if(count == 9) {
+                    document.getElementsByClassName("info")[0].innerText = "Game Over";
+                    music.pause();
+                    audioGameover.play();
+                    console.log(count)
+                } 
+            }
+            
         }
     })
 })
